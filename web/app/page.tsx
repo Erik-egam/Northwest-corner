@@ -3,6 +3,7 @@
 import { useCallback, useState } from 'react'
 import InputPanel, { type Destination, type Origin } from '@/components/InputPanel'
 import SolutionView from '@/components/SolutionView'
+import WelcomeModal from '@/components/WelcomeModal'
 import { northwestCorner, type Solution } from '@/lib/northwest-corner'
 
 const INITIAL_ORIGINS: Origin[] = [
@@ -101,6 +102,7 @@ export default function Home() {
 
   return (
     <main className="min-h-dvh p-4 md:p-8">
+      <WelcomeModal />
       {/* Header */}
       <header className="mb-8 text-center">
         <h1 className="text-4xl md:text-5xl font-bold text-[#1E1B4B]" style={{ fontFamily: "'Crimson Pro', serif" }}>
