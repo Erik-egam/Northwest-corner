@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Crimson+Pro:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+body {
+  font-family: 'Atkinson Hyperlegible', Arial, sans-serif;
+  background-color: #EEF2FF;
+  color: #1E1B4B;
+}
+
+@keyframes pulse-ring {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.5), 0 0 0 0 rgba(79, 70, 229, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(79, 70, 229, 0.15), 0 0 0 12px rgba(79, 70, 229, 0);
+  }
+}
+
+@keyframes slide-in-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce-in {
+  0% { transform: scale(0.8); opacity: 0; }
+  60% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.cell-active { animation: pulse-ring 1.4s ease-in-out infinite; }
+.slide-in { animation: slide-in-up 0.3s ease-out both; }
+.bounce-in { animation: bounce-in 0.35s ease-out both; }
+.fade-in { animation: fade-in 0.25s ease-out both; }
+
+.clay-card {
+  background: white;
+  border-radius: 20px;
+  border: 2px solid #C7D2FE;
+  box-shadow: 4px 4px 0px 0px #C7D2FE;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] { -moz-appearance: textfield; }
