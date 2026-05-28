@@ -1,11 +1,11 @@
 def northwest_corner(supply, demand, costs=None):
     """
-    Resuelve el problema de transporte usando el Método de la Esquina Noroeste.
+    El Método de la Esquina Noroeste.
 
     supply: lista de ofertas de cada origen
     demand: lista de demandas de cada destino
     costs:  matriz de costos (opcional, solo para calcular el costo total)
-
+    
     Retorna la matriz de asignaciones y el costo total (si se dan costos).
     """
     m = len(supply)
